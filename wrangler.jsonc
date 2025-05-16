@@ -1,0 +1,20 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "cloudflare-page-counter",
+	"main": "./dist/_worker.js/index.js",
+	"compatibility_date": "2025-05-15",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"kv_namespaces": [
+		{
+			"binding": "page_views",
+			"id": "3de8b6a43621443ea6679bdbf09da854"
+		}
+	]
+}
